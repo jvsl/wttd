@@ -3,6 +3,7 @@ from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
 
 
+
 class SubscribeTest(TestCase):
 
     def setUp(self):
@@ -98,5 +99,6 @@ class SubscribeSuccessMessage(TestCase):
         data_ = dict(name='joao', cpf='12345678911',
                     email="ccjoaovictor@gmail.com", phone="23-1234-2323")
         response = self.client.post('/inscricao/', data_, follow=True)
-        print (response.content)
         self.assertContains(response, 'Inscricao realizada com sucesso')
+
+
