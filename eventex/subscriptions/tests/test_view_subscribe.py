@@ -32,9 +32,7 @@ class SubscribeTest(TestCase):
         form = self.resp.context['form']
         self.assertIsInstance(form, SubscriptionForm)
 
-    def test_form_has_fields(self):
-        form = self.resp.context['form']
-        self.assertSequenceEqual(['name', 'cpf','email','phone'], list(form.fields))
+    
 
 class SubscribePostTest(TestCase):
     def setUp(self):
@@ -50,27 +48,6 @@ class SubscribePostTest(TestCase):
 
     def test_send_subscribe_email(self):
         self.assertEqual(1, len(mail.outbox))
-
-    def test_subscription_email_subject(self):
-        email = mail.outbox[0]
-        expect = "Confirmação de inscrição"
-        self.assertEqual(expect, email.subject)
-
-    def test_subscription_email_from(self):
-        email = mail.outbox[0]
-        expect = "contato@eventex.com.br"
-        self.assertEqual(expect, email.from_email)
-
-    def test_subscription_email_to(self):
-        email = mail.outbox[0]
-        expect = ['contato@eventex.com.br', 'ccjoaovictor@gmail.com']
-
-        self.assertEqual(expect, email.to)
-
-    def test_subscription_email_body(self):
-        email = mail.outbox[0]
-        self.assertIn("joao", email.body)
-        self.assertIn("1234567891", email.body)
 
 
 class SubscriveInvalidPost(TestCase):
