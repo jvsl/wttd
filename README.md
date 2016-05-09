@@ -2,6 +2,8 @@
 
 Sistemas de eventos
 
+[![Build Status](https://travis-ci.org/jvsl/wttd.svg?branch=master)](https://travis-ci.org/jvsl/wttd)
+[![Code Health](https://landscape.io/github/jvsl/wttd/master/landscape.svg?style=plastic)](https://landscape.io/github/jvsl/wttd/master)
 
 ## como desenvolver?
 
