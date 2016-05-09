@@ -13,7 +13,7 @@ Sistemas de eventos
 6. Execute os testes
 
 '''console
-git clone
+git clone https://github.com/jvsl/wttd.git
 cd wttd
 python -m venv .wttd
 source .wttd/bin/activate
