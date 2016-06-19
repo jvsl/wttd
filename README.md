@@ -14,7 +14,7 @@ Sistemas de eventos
 5. Configure a instância com o .env
 6. Execute os testes
 
-'''console
+```console
 git clone https://github.com/jvsl/wttd.git
 cd wttd
 python -m venv .wttd
@@ -22,7 +22,7 @@ source .wttd/bin/activate
 pip install -r requirements.txt
 cp contrib/env-sample .env
 python manage.py test
-'''
+```
 
 ## Como fazer o depoloy?
 1. Crie uma instância no heroku
@@ -32,12 +32,12 @@ python manage.py test
 5. Configure um serviço de email
 6. Envie o código para o heroku
 
-'''console
+```console
 heroku create minhainstancia
 heroku config:push
 heroku config:set SECRET_KEY='python contrib/secret_gen.py
 heroku config:set DEBUG=False
-'''
 # Configuro o email
 git push heroku master --force
-'''
+```
+
